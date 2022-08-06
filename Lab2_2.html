@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์มจองทัวร์</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>แบบฟอร์มจองทัวร์</h1>
+    <form action="#">
+        <fieldset>
+            <legend>ข้อมูลทั่วไป</legend>
+            <!-- ชื่อ-นามสกุล -->
+            <div class="nameBox">
+                <label for="nameBox">ชื่อ-นามสกุล :</label><br>
+                <input type="text" id="nameBox" name="nameBox" placeholder="กรอกชื่อ-นามสกุล" required>
+                <span class="validity"></span>
+            </div>
+
+            <!-- email -->
+            <div class="emailBox">
+                <label for="emailBox">Email :</label><br>
+                <input type="email" id="emailBox" name="emailBox" required>
+                <span class="validity"></span>
+            </div>
+            
+            <!-- โทรศัพท์ -->
+            <div class="telBox">
+                <label for="telBox">โทรศัพท์ :</label><br>
+                <input type="tel" id="telBox" name="telBox" required
+                    pattern="[+][0-9]{11}" value="+66">
+                <span class="validity"></span>
+            </div>
+
+            <!-- ที่อยู่ -->
+            <div class="messageBox">
+                <label for="message">ที่อยู่ :</label><br>
+                <textarea id="message" name="messageBox" cols="80" rows="6" required></textarea>
+            </div>
+
+            <!-- รหัสไปรษณีย์ -->
+            <div class="codeBox">
+                <label for="codeBox">รหัสไปรษณีย์ :</label><br>
+                <input pattern="[0-9]{5}"
+                    type="text" name="codeBox" title="ใส่เลขรหัสไปรษณีย์ 5 ตัว">
+            </div>
+            
+            <!-- รูปผู้จอง -->
+            <div class="fileBox">
+                <label for="fileBox">รูปผู้จอง : </label>
+                <input type="file"
+                    id="fileBox" name="fileBox"
+                    accept="image/png, image/jpeg">
+            </div>
+        </fieldset>
+        <br>
+    
+        <!-- ข้อมูลเข้าสู่ระบบ -->
+        <fieldset>
+            <legend>ข้อมูลเข้าสู่ระบบ</legend>
+            <!-- Username -->
+                <div class="userBox">
+                    <label for="userBox">Username:</label><br>
+                    <input 
+                    pattern="([a-z]|[A-Z]|_){8,}"
+                    type="text"
+                    name="userBox"
+                    title="ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่ 8 ตัวขึ้นไป">
+                    <br>
+                    <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่ 8 ตัวขึ้นไป</i>
+                </div>
+
+            <!-- Password -->
+                <div class="PasswordBox">
+                    <label for="PasswordBox">Password:</label><br>
+                    <input 
+                    pattern="[A-Za-z][A-Za-z0-9]{8,}"
+                    type="password"
+                    name="PasswordBox"
+                    title="ประกอบด้วยอักขระอะไรก็ได้ตั้งแต่ 8 ตัวขึ้นไป">
+                    <br>
+                    <i>ประกอบด้วยอักขระอะไรก็ได้ตั้งแต่ 8 ตัวขึ้นไป</i>
+                </div>
+        </fieldset>
+        <br>
+
+        <!-- ข้อมูลทัวร์ที่ต้องการ -->
+        <fieldset>
+            <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+            <!-- แพคเก็จทัวร์ -->
+            <div class="package">
+                <label for="package">แพคเก็จทัวร์ : </label>
+                <select name="package" id="package">
+                    <option value="--select--">--select--</option>
+                    <option value="China">ประเทศจีน</option>
+                    <option value="Japan">ประเทศญี่ปุ่น</option>
+                    <option value="Korea">ประเทศเกาหลี</option>
+                    <option value="Singapore">ประเทศสิงคโปร์</option>
+                    <option value="Vietnam">ประเทศเวียดนาม</option>
+                </select>
+            </div>
+
+            <!-- วันที่เดินทาง -->
+            <div class="dateBox">
+                <label for="dateBox">วันที่เดินทาง : </label>
+                <input type="date" name="dateBox" id="dateBox">
+            </div>
+
+            <!-- จำนวนผู้เดินทาง -->
+            <div class="count">
+                <label for="count">จำนวนผู้เดินทาง : </label>
+                <input 
+                pattern="([1-9]|10)"
+                type="text"
+                name="count"
+                title="รับค่าตัวเลขต่ำสุดคือค่า1 สูงสุดคือ 10">
+            </div>
+
+            <!-- เน้นการท่องเที่ยวใด -->
+            <div class="travel">
+                <label for="travel">เน้นการท่องเที่ยวแบบใด?</label>
+                <div class="shopping">
+                    <input type="checkbox" name="shopping" id="shopping">
+                    <label for="shopping">ชอปปิ้ง</label>
+                </div>
+
+                <div class="nature">
+                    <input type="checkbox" name="nature" id="nature">
+                    <label for="nature">ธรรมชาติ</label>
+                </div>
+
+                <div class="sea">
+                    <input type="checkbox" name="sea" id="sea">
+                    <label for="sea">ทะเล</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- ยอมรับเงื่อนไข -->
+        <div class="condition">
+        <p>ยอมรับเงื่อนไขและข้อตกลง</p>
+        <input type="radio" name="condition" id="agree" checked>
+        <label for="agree">I agree</label>    
+
+        <input type="radio" name="condition" id="disagree">
+        <label for="disagree">I disagree</label>
+        </div>
+        <br>
+
+        <!-- จอง -->
+        <div>
+            <input type="submit" value="จอง">
+        </div>
+        
+    </form>
+    
+</body>
+</html>

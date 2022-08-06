@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input type</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+
+        form .button{
+            height: 45px;
+            margin: 45px 0;
+        }
+        form .button input{
+            height: 100%;
+            width: 100%;
+            outline: none;
+            color: blue;
+            background-color: darksalmon;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Please input</h1>
+    <!-- - ข้อ1 -->
+    <div class="inputbox">
+        <span class="sub">ชื่อเต็ม/ย่อของสาขาวิชา :</span>
+        <input type="text" placeholder="ใส่ชื่อเต็ม/ย่อของสาขาวิชาของคุณ">
+    </div>
+
+    <!-- ข้อ9 -->
+    <div class="inputbox">
+        <span class="sub">รหัสผ่าน :</span>
+        <input type="password" placeholder="ใส่รหัสผ่านของคุณ">
+    </div>
+
+    <!-- ข้อ5 -->
+    <div class="inputbox">
+        <span class="sub">รหัสบัตรประชาชน :</span>
+        <input type="text" placeholder="ใส่รหัสบัตรประชาชนของคุณ">
+    </div>
+
+    <!-- ข้อ3 -->
+    <h3>อาหารที่ชื่นชอบ 5 ชนิดที่ชื่นชอบจากมากไปน้อย</h3>
+    <div class="inputbox">
+        <span class="sub">ชื่ออาหารที่ชื่นชอบอันดับ 1 :</span>
+        <input type="text" placeholder="ใส่ชื่ออาหารที่ชื่นชอบอันดับ 1 ของคุณ">
+    </div>
+    <div class="inputbox">
+        <span class="sub">ชื่ออาหารที่ชื่นชอบอันดับ 2 :</span>
+        <input type="text" placeholder="ใส่ชื่ออาหารที่ชื่นชอบอันดับ 2 ของคุณ">
+    </div>
+    <div class="inputbox">
+        <span class="sub">ชื่ออาหารที่ชื่นชอบอันดับ 3 :</span>
+        <input type="text" placeholder="ใส่ชื่ออาหารที่ชื่นชอบอันดับ 3 ของคุณ">
+    </div>
+    <div class="inputbox">
+        <span class="sub">ชื่ออาหารที่ชื่นชอบอันดับ 4 :</span>
+        <input type="text" placeholder="ใส่ชื่ออาหารที่ชื่นชอบอันดับ 4 ของคุณ">
+    </div>
+    <div class="inputbox">
+        <span class="sub">ชื่ออาหารที่ชื่นชอบอันดับ 5 :</span>
+        <input type="text" placeholder="ใส่ชื่ออาหารที่ชื่นชอบอันดับ 5 ของคุณ">
+    </div>
+    <br>
+
+    <!-- ข้อ2 -->
+    <div class="inputbox">
+        <span class="sub">จำนวนเงินที่จะโอน :</span>
+        <input type="number" placeholder="ใส่จำนวนเงินที่จะโอน">
+    </div>
+
+    <!-- ข้อ4 -->
+    <h3>ค่าไฟฟ้า 3 เดือนที่ผ่านมา</h3>
+    <div class="inputbox">
+        <span class="sub">ค่าไฟฟ้า 1 เดือนที่ผ่านมา :</span>
+        <input type="number" placeholder="ใส่ค่าไฟฟ้า 1 เดือนที่ผ่านมา">
+    </div>
+    <div class="inputbox">
+        <span class="sub">ค่าไฟฟ้า 2 เดือนที่ผ่านมา :</span>
+        <input type="number" placeholder="ใส่ค่าไฟฟ้า 2 เดือนที่ผ่านมา">
+    </div>
+    <div class="inputbox">
+        <span class="sub">ค่าไฟฟ้า 1 เดือนที่ผ่านมา :</span>
+        <input type="number" placeholder="ใส่ค่าไฟฟ้า 3 เดือนที่ผ่านมา">
+    </div>
+    <br>
+    <!-- ข้อ11 -->
+    <form>
+        <label for="วันเวลา">วันเวลาที่ต้องไปพบแพทย์ :</label>
+        <input id="วันเวลา" type="datetime-local" name="วันเวลาพบแพทย์">
+    </form>
+    <br>
+
+    <!-- ข้อ10 -->
+    <form>
+        <label for="เวลาเริ่ม">เวลาเริ่มเข้าเรียน :</label>
+        <input id="เวลาเริ่ม" type="time" name="เวลาเริ่ม">
+      </form>
+      <form>
+        <label for="เวลาสิ้นสุด">เวลาสิ้นสุดการเรียน :</label>
+        <input id="เวลาสิ้นสุด" type="time" name="เวลาสิ้นสุด">
+      </form>
+      <br>
+
+      <!-- ข้อ8 -->
+    <fieldset>
+        <legend>ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่ :</legend>
+        <div>
+          <input type="radio" id="เคยได้รับ" name="วัคซีน" value="เคยได้รับ">
+          <label for="เคยได้รับ">เคยได้รับ</label>
+        </div>
+        <div>
+          <input type="radio" id="ไม่เคยได้รับ" name="วัคซีน" value="ไม่เคยได้รับ">
+          <label for="ไม่เคยได้รับ">ไม่เคยได้รับ</label>
+        </div>
+    </fieldset>
+
+    <!-- ข้อ6 -->
+    <fieldset>
+        <legend>ความพึงพอใจของหนังสือเล่มนี้ :</legend>
+        <div>
+          <input type="radio" id="พอใจมาก" name="ความพึงพอใจ" value="พอใจมาก">
+          <label for="พอใจมาก">พอใจมาก</label>
+        </div>
+        <div>
+          <input type="radio" id="พอใจ" name="ความพึงพอใจ" value="พอใจ">
+          <label for="พอใจ">พอใจ</label>
+        </div>
+        <div>
+            <input type="radio" id="พอใจเล็กน้อย" name="ความพึงพอใจ" value="พอใจเล็กน้อย">
+            <label for="พอใจเล็กน้อย">พอใจเล็กน้อย</label>
+          </div>
+          <div>
+            <input type="radio" id="ไม่พอใจเลย" name="ความพึงพอใจ" value="ไม่พอใจเลย">
+            <label for="ไม่พอใจเลย">ไม่พอใจเลย</label>
+          </div>
+    </fieldset>
+    <br>
+    
+    <!-- ข้อ7 -->
+    <form>
+        <div>
+          <label for="content">อาการป่วย:</label>
+          <textarea id="content" name="content" cols="60" rows="5" placeholder="อธิบายอาการป่วยของคุณ"></textarea>
+        </div>
+        <div class="button">
+            <input type="submit" value="Submit">
+          </div>
+      </form>
+
+</body>
+</html>

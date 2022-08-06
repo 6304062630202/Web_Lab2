@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Exercise</title>
+</head>
+<body>
+    <h1>เข้าสู่ระบบ</h1>
+    <form action="logout.html">
+        <fieldset>
+            <div class="name-password">
+                <label for="nameBox">Username :</label>
+                <input type="text" id="nameBox" name="nameBox" required> 
+                <br>
+                <label for="PasswordBox">Password :</label>
+                <input type="password" id="PasswordBox" name="PasswordBox" required> 
+            </div>
+
+            <div class="numbers">
+                <label for="number">กรุณาพิมพ์ตามตัวเลขที่ปรากฏ : 1559</label>
+                <input pattern="1559"
+                type="text" name="number" id="number" required>
+            </div>
+        </fieldset>
+        <br>
+
+        <div class="login">
+            <button type="submit" name="button" id="button">
+                <img src="login.jpg" width="60" height="60">
+        </button>
+        </div>
+    </form>
+</body>
+</html>
